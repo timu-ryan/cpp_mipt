@@ -1,7 +1,7 @@
 #include <iostream>
 
 // 1.4. Expressions and operators
-//
+
 // statement -> declaration, expression, control statement
 
 // birary operators:
@@ -19,7 +19,13 @@
 // постфиксные инкременты приоритетнее
 
 // тернарный 
-// x ? a : b
+// x ? a : b - тип вычисляется на этапе компиляции
+//
+// оператор ,   - (a, b) = 1;  - вычисляет левую, вычисляет правую, возвращает правую
+// 
+// operator sizeof(a); - сколько байтов в памяти занимает
+
+
 
 void f();
 
@@ -34,5 +40,8 @@ void f() {
   x = y = z; // == x = (y = z) - правоассоциативные - lvalue
   x + y + x; // == (x + y) + z - левоассоциативные - rvalue
   
+  sizeof(x);
+  sizeof x; 
+
 }
 
