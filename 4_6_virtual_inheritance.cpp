@@ -3,6 +3,8 @@
 // 4.6. Virtual inheritance.
 // solves the diamond problem
 
+// vtables
+
 struct Granny {
   int g = 1;
 };
