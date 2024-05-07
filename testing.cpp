@@ -1,25 +1,27 @@
 #include <iostream>
 
-int f(int x) {
-  return x*x;
-}
-void ff(int& x) {
-  x *= x;
-}
+struct Granny {
+  double g = 1.1;
+};
 
-int some_function(int& a);
+struct Mom: Granny {
+  double m = 2.1;
+};
+
+struct Dad: Granny {
+  double d = 2.2;
+};
+
+struct Son: Mom, Dad {
+  double s = 3.1;
+};
 
 int main() {
-  int x = 4;
-  int y = 9;
-  std::cout << f(x) << '\n';
+  Son s;
 
-  ff(y);
-  std::cout << y << '\n';
-
-  while(true) {
-    std::cout << f(x) << '\n';
-  }
+//  std::cout << s.g << '\n';
+  Mom m;
+//  std::cout << m.g << '\n';
 
 }
 

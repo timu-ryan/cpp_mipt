@@ -10,9 +10,12 @@
 struct Shape {
   virtual double area() const = 0;  // = 0 - pure virtual method
                                     // cannot declare Shape object
-
   virtual ~Shape() = default;
 };
+
+double Shape::area() const {
+  return 0.0;
+} // OK
 
 struct Square: Shape {
   double a;
@@ -36,6 +39,9 @@ int main() {
   Shape& s = sq;
   s.area();
   */
+
+  Circle c(1.0);
+  // C.Shape::f(); - OK
 
   std::vector<Shape*> v;
   v.push_back(new Square(1.0));
