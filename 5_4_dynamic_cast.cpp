@@ -20,7 +20,6 @@ struct Derived: Base {
   void f() override {}
 };
 
-
 int main() {
   Derived d;
   Base& b = d;
